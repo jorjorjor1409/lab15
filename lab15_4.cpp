@@ -17,3 +17,19 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a, int &b, int &c, int &d) {
+    int numbers[] = {a, b, c, d};
+    int size = 4;
+
+    for (int i = size - 1; i > 0; --i) {
+        int j = rand() % (i + 1);
+        swap(numbers[i], numbers[j]);
+    }
+
+	a = numbers[0];
+    b = numbers[1];
+    c = numbers[2];
+    d = numbers[3];
+    
+}
